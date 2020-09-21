@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "haydesoftegitim"
+    }
+  },
+  "defaultProject": "haydesoftegitim",
+  "cli": {
+    "analytics": false
+  }
 }

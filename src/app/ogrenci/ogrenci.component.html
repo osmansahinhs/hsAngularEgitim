@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit(kayit.value)" [formGroup]="kayit" >
+    <div class="form-group">
+        <label for="ad"></label>
+        <input type="text" formControlName="ad" id="ad" class="form-control" placeholder="" aria-describedby="helpId">
+        <small id="helpId" class="text-muted">Help text</small>
+    </div>
+    <div class="form-group">
+        <label for="soyad"></label>
+        <input type="text" formControlName="soyad" id="soyad" class="form-control" placeholder="" aria-describedby="helpId"
+        [ngClass]="{ 'gecersiz' : gonderildiMi && f.soyad.errors}">
+        
+        <small id="helpId" class="text-muted" *ngIf="gonderildiMi && f.soyad.errors">Soyad gecersiz</small>
+    </div>
+    <div class="form-group">
+        <label for="dogumTarihi"></label>
+        <input type="date" formControlName="dogumTarihi" id="dogumTarihi" class="form-control" placeholder="" aria-describedby="helpId">
+        <small id="helpId" class="text-muted">Help text</small>
+    </div>
+    <button type="submit">Kaydet</button>
+</form>
+
